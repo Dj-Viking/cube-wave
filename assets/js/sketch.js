@@ -7,10 +7,12 @@ function setup(){
 
 function draw(){
     background(0);
+    translate(0, 25, -50)
+    rotateX(PI / -8)
     // translate(width / 2, height / 2);
     rectMode(CENTER);
 
-    rotateX(angle * 1.1);
+    //rotateX(angle * 1.1);
 
     let offset = 0;
     for (let x = 0; x < width; x += w){
@@ -21,7 +23,7 @@ function draw(){
         translate(x - width / 2, 0, 0);
         box(w, h, w);
         // rect(x - width / 2 + w / 2, 0, w - 2, h)
-        offset += .03;
+        offset += .4;
         pop();
     }
 
