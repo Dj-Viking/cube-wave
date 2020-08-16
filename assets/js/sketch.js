@@ -21,8 +21,8 @@ function draw(){
     
    
 
-    rotateX(angle / PI);
-    rotateY(angle / 2);
+    rotateX(angle / PI * 2);
+    rotateY(angle / PI);
 
     //let offset = 0;
     for (let z = 0; z < height; z += w){
@@ -51,5 +51,5 @@ function draw(){
 
 
 
-    angle += .05;
+    angle += .01;
 }
