@@ -1,11 +1,11 @@
 let angle = 0;
 let w = 30;
-let ma;
+let magicAngle;
 let maxD;
 
 function setup(){
     createCanvas(600, 600, WEBGL);
-    ma = atan(1/sqrt(2));
+    magicAngle = atan(1/sqrt(2));
     maxD = dist(0, 0, 250, 250);
 }
 
@@ -14,9 +14,9 @@ function draw(){
     ortho(-500, 500, 500, -500, 0, 1900);
     //ambientLight(255, 0, 255, 1, -1, 10);
 
-    //translate(0, 0, -100);
+    translate(0, 0, -100);
     rotateX(QUARTER_PI + 6.3);
-    rotateY(ma + .15);
+    rotateY(magicAngle + .15);
     rotateZ(QUARTER_PI + 2.4);
     
    
@@ -36,7 +36,7 @@ function draw(){
             translate(x - width / 2, 0, z - height / 2);
             
             normalMaterial();
-            // torus(w, h, w - 2)
+            //torus(w, h, w - 2)
             // ambientMaterial(0, 0, 255);
             // ambientLight(255);
             box(w - 2, h, w - 2);
@@ -51,5 +51,5 @@ function draw(){
 
 
 
-    angle += .01;
+    angle += .05;
 }
