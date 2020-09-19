@@ -4,7 +4,7 @@ let magicAngle;
 let maxD;
 
 function setup(){
-    createCanvas(600, 600, WEBGL);
+    createCanvas(600, 400, WEBGL);
     magicAngle = atan(1/sqrt(2));
     maxD = dist(0, 0, 250, 250);
 }
@@ -14,8 +14,8 @@ function draw(){
     ortho(-500, 500, 500, -500, 0, 1900);
     //ambientLight(255, 0, 255, 1, -1, 10);
 
-    translate(0, 0, -100);
-    rotateX(QUARTER_PI + 6.3);
+    translate(100, 0, -100);
+    rotateX(QUARTER_PI + 6.6);
     rotateY(magicAngle + .15);
     rotateZ(QUARTER_PI + 2.4);
     
@@ -51,5 +51,5 @@ function draw(){
 
 
 
-    angle += .05;
+    angle += .02;
 }
